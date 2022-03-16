@@ -5,7 +5,6 @@ import logging
 import os
 import re
 import aiohttp
-import json
 
 from telethon import events
 from telethon.sessions import StringSession
@@ -44,8 +43,6 @@ else:
     API_HASH_KEY = Config.API_HASH
     STRING_SESSION = Config.STRING_SESSION
     MONGO_DB_URL = Config.MONGO_DB_URL
-    with open(os.path.join(os.getcwd(), "Lovely_System/elevated_users.json"), "r") as f:
-        data = json.load(f)
     Lovely = data["Lovely"]
     ENFORCERS = data["ENFORCERS"]
     INSPECTORS = data["INSPECTORS"]
